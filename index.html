@@ -2,6 +2,12 @@
 <html>
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
+    <script type="text/javascript"> window.addEventListener('load', function() {
+        var scripts=document.body.getElementsByTagName('script');
+        var canvases=document.body.getElementsByTagName('canvas');
+        new Processing(canvases[0], scripts[0].text);
+      }, false);
+    </script>
   </head>
   <body>
     <h1>Hello World, Mellow World</h1>
