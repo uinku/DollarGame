@@ -139,6 +139,7 @@ Graph.prototype.draw = function(edgeSW, nodeRadius, nodeSW) {
 /** Game **/
 
 var Game = function(nodeRadius) {
+  console.log("game init");
     this.nodeRadius = nodeRadius;
     this.mouseOverNodeRadius = nodeRadius + 5;
     this.mouseOverNode = null;
@@ -158,6 +159,7 @@ var Game = function(nodeRadius) {
 };
 
 Game.prototype.draw = function() {
+  console.log("game draw");
     background(245);
     this.graph.draw(4, this.nodeRadius, 2);
     if (this.mouseOverNode !== null) {
@@ -236,6 +238,7 @@ var mouseMoved = function() {
 };
 
 var mouseClicked = function() {
+  console.log("click");
     game.handleClick(mouseX, mouseY, mouseButton === LEFT && !(keyIsPressed && keyCode === 16));
 };
 
