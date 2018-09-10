@@ -19,21 +19,14 @@ void setup() {
   var height = 400;
   size(width, height);
 
-var game = new Game(26);
-/*game.graph.print();
-println("genus: " + game.graph.getGenus());
-println("sum: " + game.graph.getSum());
-println("solvable: " + game.isSolvable());*/
-game.draw();
+  var game = new Game(26);
+  game.graph.print();
+  println("genus: " + game.graph.getGenus());
+  println("sum: " + game.graph.getSum());
+  println("solvable: " + game.isSolvable());
+  game.draw();
+  console.log("end setup");
 }
-
-var printProperties = function(obj) {
-    for (var key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            println(key + " -> " + obj[key]);
-        }
-    }
-};
 
 /** Node **/
 
