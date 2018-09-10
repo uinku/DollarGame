@@ -18,6 +18,13 @@ void setup() {
   var width = 400;
   var height = 400;
   size(width, height);
+
+game = new Game(26);
+/*game.graph.print();
+println("genus: " + game.graph.getGenus());
+println("sum: " + game.graph.getSum());
+println("solvable: " + game.isSolvable());*/
+game.draw();
 } 
       
 var game;
@@ -253,13 +260,6 @@ var keyPressed = function() {
 };
 
 /** Init **/
-
-game = new Game(26);
-/*game.graph.print();
-println("genus: " + game.graph.getGenus());
-println("sum: " + game.graph.getSum());
-println("solvable: " + game.isSolvable());*/
-game.draw();
     </script>
   </body>
 </html>
