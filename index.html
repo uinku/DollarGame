@@ -223,12 +223,12 @@ Game.prototype.handleClick = function(x, y, isPositive) {
 /** Input **/
 
 var mouseMoved = function() {
-  console.log("mouse move");
-    game.handleMove(mouseX, mouseY);
+  println("mouse move");
+  game.handleMove(mouseX, mouseY);
 };
 
 var mouseClicked = function() {
-  console.log("click");
+  println("click");
   game.handleClick(mouseX, mouseY, mouseButton === LEFT && !(keyIsPressed && keyCode === 16));
 };
 
