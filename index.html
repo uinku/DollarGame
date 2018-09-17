@@ -15,14 +15,6 @@
     <script>      
 void setup() { 
   size(400, 400);
-
-  var game = new Game(26);
-  game.graph.print();
-  println("genus: " + game.graph.getGenus());
-  println("sum: " + game.graph.getSum());
-  println("solvable: " + game.isSolvable());
-  game.draw();
-  console.log("end setup");
 }
 
 /** Node **/
@@ -237,7 +229,7 @@ var mouseMoved = function() {
 
 var mouseClicked = function() {
   console.log("click");
-    game.handleClick(mouseX, mouseY, mouseButton === LEFT && !(keyIsPressed && keyCode === 16));
+  game.handleClick(mouseX, mouseY, mouseButton === LEFT && !(keyIsPressed && keyCode === 16));
 };
 
 var keyPressed = function() {
@@ -249,6 +241,16 @@ var keyPressed = function() {
 };
 
 /** Init **/
+var init = function() {      
+  var game = new Game(26);
+  game.graph.print();
+  println("genus: " + game.graph.getGenus());
+  println("sum: " + game.graph.getSum());
+  println("solvable: " + game.isSolvable());
+  game.draw();
+  console.log("end setup");
+}
+init();
     </script>
   </body>
 </html>
