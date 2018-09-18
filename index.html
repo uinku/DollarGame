@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
+    <title>Dollar Game</title>
   </head>
   <body>
     <h1>Hello World, Mellow World</h1>
     <canvas id="myCanvas" width="400px" height="400px"></canvas>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
   <script>
 var programCode = function(processingInstance) {
   with (processingInstance) {
@@ -219,7 +219,7 @@ var programCode = function(processingInstance) {
     /** Input **/
 
     var mouseMoved = function() {
-      println("mouse move");
+      //println("mouse move");
       game.handleMove(mouseX, mouseY);
     };
 
