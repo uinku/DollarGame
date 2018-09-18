@@ -8,12 +8,12 @@
     <canvas id="myCanvas"></canvas>
   </body>
   
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>-->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
   <script>
 var programCode = function(processingInstance) {
   with (processingInstance) {
-    size(400, 400); 
+    size(400, 400);
     frameRate(30);
 
     /** Node **/
@@ -227,7 +227,7 @@ var programCode = function(processingInstance) {
     };
 
     var mouseClicked = function() {
-      println("click");
+      println("click " + millis());
       game.handleClick(mouseX, mouseY, mouseButton === LEFT && !(keyIsPressed && keyCode === 16));
     };
 
@@ -250,7 +250,8 @@ var programCode = function(processingInstance) {
       console.log("end setup");
     }
     init();
-}};
+  }
+};
   // Get the canvas that ProcessingJS will use
   var canvas = document.getElementById("myCanvas"); 
   // Pass the function to ProcessingJS constructor
